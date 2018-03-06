@@ -77,8 +77,13 @@ sampleArray[2][0]
 // Assign some movie values to your keys!
 // Access your object literal and print out in the console the following string “ My favorite movies are {topMovieOne} and {topMovieTwo}, but I really enjoy {topMovieThree}”. 
 
+topMovies = {
+  topMovieOne: "Pan's Labyrinth",
+  topMovieTwo: "Caddyshack",
+  topMovieThree: "Network"
+};
 
-
+console.log("My favorite movies are " + topMovies.topMovieOne + " and " + topMovies.topMovieTwo + ", but I really enjoy " + topMovies.topMovieThree + ".")
 
 // 6. Object Literals & Changing Values
 // Create an object with name and eyeColor properties. Change the eye color to 'brown'. Now add a hairColor property and change it to 'blonde'"
