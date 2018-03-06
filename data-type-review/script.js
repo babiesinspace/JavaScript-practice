@@ -51,8 +51,24 @@ console.log(myAge + true); // returns 31 (true evaluates to 1, false 0)
 // Add a new classmate into your array!
 // The classmate in the 2nd position of your array has gone missing. Lets remove them from the array. 
 // Remove the last element of our array without specifying its index. 
+
+let arr = ["Alex", "Francis", "Jamie", "Ronan", "Issac"]
+
+positionFour = arr[3];
+
+arr.push("Danielle")
+
+arr.splice(1,1);
+
+arr.pop();
+
 // Given the following multidimensional array: 
+// [['David','Andrew'], ['Mike', 'Apple'], ['Beans' , 'Flour']]
 // Access the array and return the element that contains ‘beans’
+
+let sampleArray =  [['David','Andrew'], ['Mike', 'Apple'], ['Beans' , 'Flour']]
+
+sampleArray[2][0]
 
 
 // 5. Object Literals
