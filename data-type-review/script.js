@@ -139,3 +139,7 @@ Object.is(x, "45") // expect true
 // ********** (10)
 // *********(9)
 // ********(8) 
+
+for (let x = 10; x > 0; x--) {
+  console.log("*".repeat(x));
+}
