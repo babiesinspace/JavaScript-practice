@@ -85,6 +85,9 @@ topMovies = {
 
 console.log("My favorite movies are " + topMovies.topMovieOne + " and " + topMovies.topMovieTwo + ", but I really enjoy " + topMovies.topMovieThree + ".")
 
+// Using Interpolation:
+console.log(`My favorite movies are ${topMovies.topMovieOne} and ${topMovies.topMovieTwo}, but I really enjoy ${topMovies.topMovieThree}.`)
+
 // 6. Object Literals & Changing Values
 // Create an object with name and eyeColor properties. Change the eye color to 'brown'. Now add a hairColor property and change it to 'blonde'"
 
@@ -128,6 +131,8 @@ if (ac === "on" && temperature > 80) {
 //  Write a conditional that checks if our variable is equal to the number 45.
 
 let x = "45";
+
+x === "45" // expect true
 
 x === 45 ? true : false; //expect false
 
