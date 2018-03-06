@@ -88,6 +88,14 @@ console.log("My favorite movies are " + topMovies.topMovieOne + " and " + topMov
 // 6. Object Literals & Changing Values
 // Create an object with name and eyeColor properties. Change the eye color to 'brown'. Now add a hairColor property and change it to 'blonde'"
 
+descriptors = {
+  name: "Alex",
+  eyeColor: "blue",
+}
+
+descriptors.eyeColor = "brown";
+
+descriptors.hairColor = "blonde";
 
 // 7. Logic
 // Write a conditional that checks if a variable is less than 10. If it is, alert the user that their variable is less than 10. If it is not, let the user know what the variable was and that it was greater than 10.
