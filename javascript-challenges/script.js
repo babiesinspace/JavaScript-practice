@@ -20,3 +20,20 @@ for (i = 99; i > 1; i--) {
 
 console.log("1 crow on the wall. 1 single crow.\nIt fell down and became a wight.\nThere's no one left to defend Westeros now.")
 
+//3 - Challege : Finding recurring numbers
+//Write a program in a new Repl.it that outputs how many times a number is repeated in the given array :
+
+let arr = [1,2,1,2, 5]
+
+let numberAndTimes = {}
+
+for (i = 0; i < arr.length; i++) {
+  let num = arr[i]
+  if (numberAndTimes.hasOwnProperty(num)) {
+    numberAndTimes[num] = (numberAndTimes[num] + 1)
+  } else {
+    numberAndTimes[arr[i]] = 1;
+  }
+}
+
+console.log(numberAndTimes)
