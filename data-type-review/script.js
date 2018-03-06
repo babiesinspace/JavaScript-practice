@@ -99,6 +99,14 @@ descriptors.hairColor = "blonde";
 
 // 7. Logic
 // Write a conditional that checks if a variable is less than 10. If it is, alert the user that their variable is less than 10. If it is not, let the user know what the variable was and that it was greater than 10.
+
+let overUnder = prompt("give me a number");
+
+if (overUnder < 10) {
+  alert("That's less than 10!")
+} else {
+  alert("Your guess was " + overUnder + ". That is more than or equal to 10.")
+}
 // Write a program that evaluates two things: 
 // temperature and the status of an air conditioner (on or off). 
 // If the temperature is warmer than 80, and the air conditioner is off, log "turn the ac on!".
@@ -106,6 +114,15 @@ descriptors.hairColor = "blonde";
 // If the temperature is colder than 60 and the air conditioner is on, log "brrr, turn this thing off".
 // If the temperature is cooler than 80, and the ac is off, log "not worth the electricity. leave it off." 
 
+if (ac === "on" && temperature > 80) {
+  return "this thing is broken!"
+} else if (ac === "on" && temperature < 60) {
+  return "brrr, turn this thing off!"
+} else if (ac === "off" && temperature > 80) {
+  return "turn the ac on!"
+} else {
+  return "not worth the electricity"
+}
 
 // 8. Logic & Strict Testing
 //  Write a conditional that checks if our variable is equal to the number 45.
