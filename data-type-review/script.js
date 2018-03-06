@@ -132,6 +132,8 @@ if (ac === "on" && temperature > 80) {
 
 let x = "45";
 
+x === "45" // expect true
+
 x === 45 ? true : false; //expect false
 
 Object.is(x, "45") // expect true
