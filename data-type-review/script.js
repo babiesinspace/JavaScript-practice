@@ -127,7 +127,11 @@ if (ac === "on" && temperature > 80) {
 // 8. Logic & Strict Testing
 //  Write a conditional that checks if our variable is equal to the number 45.
 
+let x = "45";
 
+x === 45 ? true : false; //expect false
+
+Object.is(x, "45") // expect true
 
 // 9. Loops ( For )
 // Create a for loop that will print out asterisks starting with 10 of them down to one. 
