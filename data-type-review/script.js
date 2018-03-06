@@ -85,6 +85,9 @@ topMovies = {
 
 console.log("My favorite movies are " + topMovies.topMovieOne + " and " + topMovies.topMovieTwo + ", but I really enjoy " + topMovies.topMovieThree + ".")
 
+// Using Interpolation:
+console.log(`My favorite movies are ${topMovies.topMovieOne} and ${topMovies.topMovieTwo}, but I really enjoy ${topMovies.topMovieThree}.`)
+
 // 6. Object Literals & Changing Values
 // Create an object with name and eyeColor properties. Change the eye color to 'brown'. Now add a hairColor property and change it to 'blonde'"
 
