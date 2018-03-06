@@ -17,6 +17,18 @@ console.log("Welcome to NYCDA, This is your first Javascript!")
 // Create another variabled called mathProduct and this will be the product of the first two variables.
 // Print mathSum and mathProduct to your developer console.
 
+let mathOne = 20;
+
+let mathTwo = 3;
+
+let mathSum = mathOne + mathTwo;
+
+let mathProduct = mathOne * mathTwo;
+
+console.log(mathSum);
+
+console.log(mathProduct);
+
 
 // 3. Mixing Data Types
 
