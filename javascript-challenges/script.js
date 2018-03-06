@@ -37,3 +37,21 @@ for (i = 0; i < arr.length; i++) {
 }
 
 console.log(numberAndTimes)
+
+// 4 - Bonus Interview Question Challenge 
+// Write a program in a new Repl.it that outputs the given string string in reverse. Do not use the JS .reverse method
+
+let str = "reversethisstring";
+
+let strToArr = str.split("")
+
+reverseArr = []
+
+for (i = (strToArr.length - 1); i >= 0; i--) {
+  reverseArr.push(strToArr[i]);
+}
+
+reverseArr.join("");
+
+
+
