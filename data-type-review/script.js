@@ -36,6 +36,13 @@ console.log(mathProduct);
 // Create another variable called myAge and give it a value of your age. 
 // Add those two together and see what happens! Do you get a string or a number back? How about if we add a number and a boolean?
 
+let test = "Alex";
+
+let myAge = 30;
+
+console.log(test + myAge); // returns 'Alex30'
+
+console.log(myAge + true); // returns 31 (true evaluates to 1, false 0)
 
 // 4. Arrays & Multidimensional Arrays 
 
