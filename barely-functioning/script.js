@@ -10,7 +10,16 @@ function isEven(num) {
 
 function factorial(num) {
   if (num === 1 || num === 0) {
-    return 1
+    return 1;
   }
   return num * factorial(num - 1);
+}
+
+//return the given spinal-case string, written in snake-case 
+
+function toSnakeCase(string) {
+  for(i = 0; i < (string.length - 1); i++) {
+    string = string.replace("-", "_");
+  }
+  return string;
 }
