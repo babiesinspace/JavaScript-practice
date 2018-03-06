@@ -5,6 +5,9 @@
 
 // Create a script using JS that will alert a user with “Welcome to NYCDA, This is your first Javascript!” as well as log it into your developer console. 
 
+alert("Welcome to NYCDA, This is your first Javascript!");
+
+console.log("Welcome to NYCDA, This is your first Javascript!")
 
 // 2. Variables and Math
 
