@@ -53,20 +53,50 @@ function simpleCalc(num1, num2) {
 // Door 2 will give the user a nycda t-shirt
 // Door 3 will turn into a blackhole and teleport you to antarctica
 
+function magicDoor(inputNum) {
+  switch (inputNum) {
+    case 1:
+      alert("You won a brand new car!");
+      break
+    case 2:
+      alert("You won an NYCDA t-shirt!");
+      break
+    case 3:
+      alert("Oh no! It looks like you stepped into a blackhole and now you're in Antartica!")
+      break
+  }
+}
 
 // Function that modifies input  
 // Define a function greaterOfThree that takes three integers and returns the larger of the three.
 
+function greaterOfThree(num1, num2, num3) {
+  return [num1, num2, num3].sort(function(a, b){return a - b}).pop();
+}
 
 // Function that modifies input 
 // Define a function lineThemUp that takes three integers as arguments and returns the integers as an array.
 
+function lineThemUp(x,y,z) {
+  return [x,y,z];
+}
 
 // Function that modifies input
 // Define a function called knighter that takes a name and returns it after being knighted.
 // ex : Knighter(“Andy”) returns “Royal Knight Sir Andy”
 
-
+function knighter(name) {
+  return `Royal Knight, Sir ${name}`;
+}
 // Function with Logic 
 // Define a function called royalizer that takes a gender and name as arguments, and returns a title based on the gender. 
 // ex : royalizer(“male”, “David”) returns “His Majesty David” , for female it would be “Her Majesty X”.
+
+function royalizer(gender, name) {
+  if (gender === "male") {
+    return `His Majesty ${name}`;
+  } else {
+    return `Her Majesty ${name}`;
+  }
+}
+
