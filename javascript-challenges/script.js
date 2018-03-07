@@ -36,7 +36,11 @@ for (i = 0; i < arr.length; i++) {
   }
 }
 
-console.log(numberAndTimes)
+Object.getOwnPropertyNames(numberAndTimes).forEach(
+  function (val, idx, array) {
+    console.log(val + ' appears ' + numberAndTimes[val] + ' times');
+  }
+);
 
 // 4 - Bonus Interview Question Challenge 
 // Write a program in a new Repl.it that outputs the given string string in reverse. Do not use the JS .reverse method
