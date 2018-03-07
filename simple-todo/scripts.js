@@ -12,6 +12,10 @@ window.setTimeout(function() {
   input = prompt("What would you like to do?");
   
   switch (input) {
+    case 'new':
+      let item = prompt("What would you like to add to your list?")
+      toDoList.push(item);
+      break
 
     case default:
       alert("I'm sorry, please pick valid choice!");
