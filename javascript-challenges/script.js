@@ -32,7 +32,7 @@ for (i = 0; i < arr.length; i++) {
   if (numberAndTimes.hasOwnProperty(num)) {
     numberAndTimes[num] = (numberAndTimes[num] + 1)
   } else {
-    numberAndTimes[arr[i]] = 1;
+    numberAndTimes[num] = 1;
   }
 }
 
