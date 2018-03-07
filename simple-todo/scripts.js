@@ -16,7 +16,12 @@ window.setTimeout(function() {
       let item = prompt("What would you like to add to your list?")
       toDoList.push(item);
       break
-
+    case 'list':
+      console.log("You need to:")
+      toDoList.forEach(function(element) {
+        console.log(element);
+      });
+      break
     case default:
       alert("I'm sorry, please pick valid choice!");
       break
@@ -24,5 +29,5 @@ window.setTimeout(function() {
   }
 
   alert("Great! See you next time!")
-
+  
 }, 500);
