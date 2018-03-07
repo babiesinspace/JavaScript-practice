@@ -32,11 +32,15 @@ for (i = 0; i < arr.length; i++) {
   if (numberAndTimes.hasOwnProperty(num)) {
     numberAndTimes[num] = (numberAndTimes[num] + 1)
   } else {
-    numberAndTimes[arr[i]] = 1;
+    numberAndTimes[num] = 1;
   }
 }
 
-console.log(numberAndTimes)
+Object.getOwnPropertyNames(numberAndTimes).forEach(
+  function (val, idx, array) {
+    console.log(val + ' appears ' + numberAndTimes[val] + ' times');
+  }
+);
 
 // 4 - Bonus Interview Question Challenge 
 // Write a program in a new Repl.it that outputs the given string string in reverse. Do not use the JS .reverse method
