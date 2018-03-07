@@ -7,7 +7,7 @@ window.setTimeout(function() {
 
   let toDoList = [];
 
-  while (input !== 'quit'){
+  while (input != 'quit'){
 
   input = prompt("What would you like to do?");
   
@@ -22,12 +22,12 @@ window.setTimeout(function() {
         console.log(element);
       });
       break
-    case default:
-      alert("I'm sorry, please pick valid choice!");
+    case 'quit':
+      alert("Great! See you next time!")
       break
+    default:
+      alert("I'm sorry, please pick valid choice!");
     } 
   }
 
-  alert("Great! See you next time!")
-  
 }, 500);
