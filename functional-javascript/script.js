@@ -16,10 +16,6 @@ function ask(question, answer){
   return userGuess === answer ? 1 : 0;
 }
 
-var point = ask("Is Kim the best?", "true")
-
-console.log(point)
-
 
 var questions = [
   "Was Kim born in 1985?",
