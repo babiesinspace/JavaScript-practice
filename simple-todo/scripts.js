@@ -11,6 +11,12 @@ window.setTimeout(function() {
 
   input = prompt("What would you like to do?");
   
+  switch (input) {
+
+    case default:
+      alert("I'm sorry, please pick valid choice!");
+      break
+    } 
   }
 
   alert("Great! See you next time!")
