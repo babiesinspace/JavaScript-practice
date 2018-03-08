@@ -49,3 +49,30 @@ function movieFlightChecker(movieLengths, flightLength) {
 }
 movieFlightChecker(movieLengths,flightLength);
 //returns true
+
+function matchTimes(movieTimes, flightTime) {
+    
+    //sort by shortest to longest
+    movieTimes = movieTimes.sort((a,b) => a-b);
+    
+    let startIndex = 0;
+    let endIndex = movieTimes.length-1;
+    
+    while(startIndex < endIndex) {
+
+      //add the first number in the array and the last number of the array to find total view time
+      let total = movieTimes[startIndex] + movieTimes[endIndex];
+      // if total viewing time is equal to flight, return true
+        if(total === flightTime) {
+            return true;
+        } else if (total > flightTime) {
+          //if viewing time is too long, find the next longest movie
+            endIndex--;
+        } else if (total < flightTime) {
+          //if viewing time is too short, find next shortest movie
+            startIndex++;
+        }
+    }
+    return false;
+    
+}
