@@ -16,11 +16,14 @@ window.setTimeout(function() {
       let item = prompt("What would you like to add to your list?")
       toDoList.push(item);
       break
+    case 'delete':
+      listToDos();
+      let crossOff = prompt("What item number would you like to cross off?") - 1;
+      toDoList.splice(crossOff, 1);
+      break
     case 'list':
       console.log("You need to:")
-      toDoList.forEach(function(element) {
-        console.log(element);
-      });
+      listToDos();
       break
     case 'quit':
       alert("Great! See you next time!")
@@ -29,5 +32,11 @@ window.setTimeout(function() {
       alert("I'm sorry, please pick valid choice!");
     } 
   }
+
+function listToDos() {
+  toDoList.forEach(function(element) {
+    console.log((toDoList.indexOf(element) + 1) + ": " + element);
+  });
+}
 
 }, 500);
