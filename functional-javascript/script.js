@@ -12,8 +12,8 @@ function calc(operator, num1, num2) {
 }
 
 function ask(question, answer){
-  let userGuess = prompt(question);
-  return userGuess === answer ? 1 : 0;
+  //let userGuess = prompt(question);
+  return prompt(question) === answer ? 1 : 0;
 }
 
 
@@ -34,8 +34,8 @@ var answers = [
 let userScore = 0
 
 questions.forEach(function(q) {
-  let correctAnswer = answers[questions.indexOf(q)]
-  userScore += ask(q, correctAnswer)
+  //let correctAnswer = answers[questions.indexOf(q)]
+  userScore += ask(q, answers[questions.indexOf(q)])
 })
 
 console.log(`your score is ${userScore}`)
