@@ -34,8 +34,8 @@ window.setTimeout(function() {
   }
 
 function listToDos() {
-  toDoList.forEach(function(element) {
-    console.log((toDoList.indexOf(element) + 1) + ": " + element);
+  toDoList.forEach(function(element, i) {
+    console.log((i + 1) + ": " + element);
   });
 }
 
