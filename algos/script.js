@@ -103,13 +103,15 @@ function pigLatin(sentence) {
   let sentenceArray = sentence.split(" ")
   let translation = ""
   sentenceArray.forEach(function(word) {
-      let firstVowel = word.search(/[aeiou]/i)
-      let tail = word.slice(0, firstVowel) + "ay";
-      let head = word.slice(firstVowel);
-      word = head + tail;
-      translation += word + " "
+    let chopOff = word.search(/[aeiou]/i)
+    let head = ""
+    let tail = ""
+    if (word[chopOff] === word.charAt(0)) { chopOff = word.search(/[^aeiou]/i) }
+    tail = word.slice(0, chopOff) + "ay";
+    head = word.slice(chopOff);
+    word = head + tail;
+    translation += word + " "
   })
-  
   return translation
 }
 
