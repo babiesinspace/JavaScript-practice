@@ -233,8 +233,6 @@ Array.prototype.myForEach = function(func) {
   }
 }
 
-
-
 // Bubble Sort :
 
 function bubbleSort(array) {
