@@ -13,13 +13,11 @@ window.setTimeout(function() {
   
   switch (input) {
     case 'new':
-      let item = prompt("What would you like to add to your list?")
-      toDoList.push(item);
+      addToDo();
       break
     case 'delete':
       listToDos();
-      let crossOff = prompt("What item number would you like to cross off?") - 1;
-      toDoList.splice(crossOff, 1);
+      deleteToDo();
       break
     case 'list':
       console.log("You need to:")
@@ -37,6 +35,16 @@ function listToDos() {
   toDoList.forEach(function(element, i) {
     console.log((i + 1) + ": " + element);
   });
+}
+
+function addToDo() {
+  let item = prompt("What would you like to add to your list?")
+  toDoList.push(item);
+}
+
+function deleteToDo() {
+  let crossOff = prompt("What item number would you like to cross off?") - 1;
+  toDoList.splice(crossOff, 1);
 }
 
 }, 500);
