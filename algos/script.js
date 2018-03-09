@@ -225,6 +225,14 @@ function findMaximum(array) {
   return maxValue;
 }
 
+// Rewrite the for each function 
+
+Array.prototype.myForEach = function(func) {
+  for (i = 0; i < this.length; i++) {
+    func(this[i])
+  }
+}
+
 // Bubble Sort :
 
 function bubbleSort(array) {
