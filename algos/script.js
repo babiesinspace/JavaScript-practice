@@ -176,6 +176,44 @@ function binarySearch(values, target, start, end) {
 
 }
 
+// Print the reverse of an Array:
+
+function printReverse(array) {
+  for (i = array.length - 1; i > -1; i--) {
+    console.log(array[i]);
+  }
+}
+
+// Return a reversed version of an Array:
+
+function reversedArray(array) {
+  let reversed = []
+  for (i = array.length - 1; i > -1; i--) {
+    reversed.push(array[i]);
+  }
+  return reversed;
+}
+
+// Function checks if all elements in an array are uniform, returns a boolean
+
+function isUniform(array) {
+  let allSame;
+  for (i = 1; i < array.length; i++) {
+    if (allSame === false) return allSame
+    array[i] === array[0] ? allSame = true : allSame = false;
+  }
+  return allSame;
+}
+
+// Sum together all the values of an array
+
+function sumArray(array) {
+  sumOfElements = 0;
+  array.forEach(function(num) {
+    sumOfElements += num;
+  });
+  return sumOfElements;
+}
 
 // Bubble Sort :
 
