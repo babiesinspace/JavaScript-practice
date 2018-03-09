@@ -205,7 +205,7 @@ function bubbleSort(array) {
 
 // Insertion sort 
 
-function bubbleSort(array) {
+function insertionSort(array) {
 // Loop through the array beginning at index 1 (i)
 
   for (i = 1; i <= (array.length - 1); i++) {
