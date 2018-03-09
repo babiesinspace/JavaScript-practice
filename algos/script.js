@@ -73,6 +73,71 @@ function matchTimes(movieTimes, flightTime) {
             startIndex++;
         }
     }
-    return false;
-    
+    return false;   
+}
+
+
+// FizzBuzz
+// Write a program that console.logs the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five console.log “Buzz”. For numbers which are multiples of both three and five console.log “FizzBuzz”.
+
+function fizzBuzz(number) {
+  for (i = 1; i < number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz")
+    } else if (i % 3 === 0) {
+      console.log("Fizz")
+    } else if (i % 5 === 0) {
+      console.log("Buzz")
+    } else {
+      console.log(number)
+    }
+  }
+}
+
+// 2 - Pig Latin
+// Pig Latin is a game of alterations played on the English language. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Check out Wikipedia for more information on rules - try to get as close as possible. 
+// Compose a javascript function that takes in a regular sentence or paragraph and returns the Pig Latin equivalent. 
+
+function pigLatin(sentence) {
+
+  let sentenceArray = sentence.split(" ")
+  let translation = ""
+  sentenceArray.forEach(function(word) {
+      let firstVowel = word.search(/[aeiou]/i)
+      let tail = word.slice(0, firstVowel) + "ay";
+      let head = word.slice(firstVowel);
+      word = head + tail;
+      translation += word + " "
+  })
+  
+  return translation
+}
+
+// 3 - Palindrome
+// Write a JavaScript function that takes in a string and checks if it is a palindrome.
+
+function palindrome(string) {
+  let arrayOfLetters = string.replace(/\s+/g, '').split("");
+  let reversedLetters = [];
+  arrayOfLetters.forEach(function(letter) {
+    reversedLetters.unshift(letter);
+  });
+  
+  return arrayOfLetters.join("") === reversedLetters.join("") ? true : false;
+}
+
+
+//Take a number and return an array of numbers going from 0 up to that number and then back down
+
+function countUpThenDown(number){
+  var countUp = [];
+  var countDown = [];
+  
+  for (i = 0; i < number; i++) {
+    countUp.push(i);
+    var down = number - (i + 1);
+    countDown.push(down);
+  }
+  countUp.push(number);
+  return countUp.concat(countDown);
 }
