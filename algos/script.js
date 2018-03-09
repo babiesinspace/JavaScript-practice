@@ -176,6 +176,14 @@ function binarySearch(values, target, start, end) {
 
 }
 
+// Print the reverse of an Array:
+
+function printReverse(array) {
+  for (i = array.length - 1; i > -1; i--) {
+    console.log(array[i]);
+  }
+}
+
 
 // Bubble Sort :
 
