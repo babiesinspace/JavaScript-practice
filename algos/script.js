@@ -180,17 +180,26 @@ function binarySearch(values, target, start, end) {
 // Bubble Sort :
 
 function bubbleSort(array) {
-  for (i = 0; i < array.length - 1; i++) {
-    //grab two elements and check their order, if unordered, order them
-    if (array[i] > array[i + 1]) {
-      //put higher number (in lesser position) to the side
-      let temp = array[i]
-      //set lesser position to the value in next index
-      array[i] = array[i + 1]
-      //set higher position to higher number 
-      array[i + 1] = temp
-
-    }
+  //flags that there has been some sorting done in the previous iteration, and therefore might need more
+  let switched = true;
+  //loop through values so long as an iteration changed the order of any of the indexes
+  while (switched === true) {
+    //flag when sort is completed
+    switched = false
+    for (i = 0; i < array.length - 1; i++) {
+      //grab two elements and check their order, if unordered, order them
+      if (array[i] > array[i + 1]) {
+        //put higher number (in lesser position) to the side
+        let temp = array[i]
+        //set lesser position to the value in next index
+        array[i] = array[i + 1]
+        //set higher position to higher number 
+        array[i + 1] = temp
+        //tells loop that a change was made, and therefore more changes may be needed
+        switched = true
+      }
+    }   
   }
   return array 
 }
+
