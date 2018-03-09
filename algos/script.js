@@ -205,6 +205,16 @@ function isUniform(array) {
   return allSame;
 }
 
+// Sum together all the values of an array
+
+function sumArray(array) {
+  sumOfElements = 0;
+  array.forEach(function(num) {
+    sumOfElements += num;
+  });
+  return sumOfElements;
+}
+
 // Bubble Sort :
 
 function bubbleSort(array) {
