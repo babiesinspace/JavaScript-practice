@@ -215,6 +215,26 @@ function sumArray(array) {
   return sumOfElements;
 }
 
+// Max number in array
+
+function findMaximum(array) {
+  let maxValue = array[0]
+  for (i = 1; i < array.length; i++) {
+    if (maxValue < array[i]) { maxValue = array[i] }
+  }
+  return maxValue;
+}
+
+// Rewrite the for each function 
+
+Array.prototype.myForEach = function(func) {
+  for (i = 0; i < this.length; i++) {
+    func(this[i])
+  }
+}
+
+
+
 // Bubble Sort :
 
 function bubbleSort(array) {
