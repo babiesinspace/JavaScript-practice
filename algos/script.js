@@ -144,12 +144,32 @@ function countUpThenDown(number){
 
 // Binary Search:
 
+function findIndex(values, target) {
+  // run search on entire array (index 0 to highest index)
+  return binarySearch(values, target, 0, values.length - 1);
+}
+
 function binarySearch(values, target, start, end) {
+
+  //check to see if you've gone too far 
+  if (start > end) return -1;
 
   // find the middle index of your value array 
   var middle = Math.floor((start + end) / 2);
   
   //grab the number in the middle of non-searched options
   var value = values[middle];
+
+  //if the value is less than your target, run again with everything less than the middle, throw everything else away
+  if (value < target) {
+    return binarySearch(values, target, start, middle - 1)
+  }
+
+  //if the value is less than your target, run again with everything greater than the middle, throw everything else away 
+  if (value > target) {
+    return binarySearch(values, target, middle + 1, end)
+  }
+
+  return middle;
 
 }
