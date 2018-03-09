@@ -194,6 +194,16 @@ function reversedArray(array) {
   return reversed;
 }
 
+// Function checks if all elements in an array are uniform, returns a boolean
+
+function isUniform(array) {
+  let allSame;
+  for (i = 1; i < array.length; i++) {
+    if (allSame === false) return allSame
+    array[i] === array[0] ? allSame = true : allSame = false;
+  }
+  return allSame;
+}
 
 // Bubble Sort :
 
