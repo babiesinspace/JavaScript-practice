@@ -103,13 +103,15 @@ function pigLatin(sentence) {
   let sentenceArray = sentence.split(" ")
   let translation = ""
   sentenceArray.forEach(function(word) {
-      let firstVowel = word.search(/[aeiou]/i)
-      let tail = word.slice(0, firstVowel) + "ay";
-      let head = word.slice(firstVowel);
-      word = head + tail;
-      translation += word + " "
+    let chopOff = word.search(/[aeiou]/i)
+    let head = ""
+    let tail = ""
+    if (word[chopOff] === word.charAt(0)) { chopOff = word.search(/[^aeiou]/i) }
+    tail = word.slice(0, chopOff) + "ay";
+    head = word.slice(chopOff);
+    word = head + tail;
+    translation += word + " "
   })
-  
   return translation
 }
 
@@ -173,3 +175,31 @@ function binarySearch(values, target, start, end) {
   return middle;
 
 }
+
+
+// Bubble Sort :
+
+function bubbleSort(array) {
+  //flags that there has been some sorting done in the previous iteration, and therefore might need more
+  let switched = true;
+  //loop through values so long as an iteration changed the order of any of the indexes
+  while (switched === true) {
+    //flag when sort is completed
+    switched = false
+    for (i = 0; i < array.length - 1; i++) {
+      //grab two elements and check their order, if unordered, order them
+      if (array[i] > array[i + 1]) {
+        //put higher number (in lesser position) to the side
+        let temp = array[i]
+        //set lesser position to the value in next index
+        array[i] = array[i + 1]
+        //set higher position to higher number 
+        array[i + 1] = temp
+        //tells loop that a change was made, and therefore more changes may be needed
+        switched = true
+      }
+    }   
+  }
+  return array 
+}
+
