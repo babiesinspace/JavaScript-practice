@@ -203,3 +203,12 @@ function bubbleSort(array) {
   return array 
 }
 
+// Insertion sort 
+
+// Loop through the array beginning at index 1 (i)
+// Assign variables to index (temp) and one less than index (j)
+// for(; j >= 0 && values[j] > temp; --j)
+// While j is more than -1 (check until index 0) and if j is more than temp (the index to the left of j), move to the left (j--)
+// Make j equal the value to the left of j
+// Now value at j is smaller than temp, so loop doesn't run 
+// Set index to the right of j (j + 1) equal to temp 
