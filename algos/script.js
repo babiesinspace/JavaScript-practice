@@ -141,3 +141,15 @@ function countUpThenDown(number){
   countUp.push(number);
   return countUp.concat(countDown);
 }
+
+// Binary Search:
+
+function binarySearch(values, target, start, end) {
+
+  // find the middle index of your value array 
+  var middle = Math.floor((start + end) / 2);
+  
+  //grab the number in the middle of non-searched options
+  var value = values[middle];
+
+}
