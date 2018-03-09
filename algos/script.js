@@ -184,6 +184,16 @@ function printReverse(array) {
   }
 }
 
+// Return a reversed version of an Array:
+
+function reversedArray(array) {
+  let reversed = []
+  for (i = array.length - 1; i > -1; i--) {
+    reversed.push(array[i]);
+  }
+  return reversed;
+}
+
 
 // Bubble Sort :
 
