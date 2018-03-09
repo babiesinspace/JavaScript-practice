@@ -212,10 +212,12 @@ function bubbleSort(array) {
 // Assign variables to index (temp) and one less than index (j)
     let temp = array[i];
     let j = array[i - 1];
-// for(; j >= 0 && values[j] > temp; --j)
 // While j is more than -1 (check until index 0) and if j is more than temp (the index to the left of j), move to the left (j--)
+    while (j > -1 && j > temp) {
 // Make j equal the value to the left of j
 // Now value at j is smaller than temp, so loop doesn't run 
 // Set index to the right of j (j + 1) equal to temp 
+      i--;
+    }
   }
 }
