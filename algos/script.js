@@ -175,3 +175,22 @@ function binarySearch(values, target, start, end) {
   return middle;
 
 }
+
+
+// Bubble Sort :
+
+function bubbleSort(array) {
+  for (i = 0; i < array.length - 1; i++) {
+    //grab two elements and check their order, if unordered, order them
+    if (array[i] > array[i + 1]) {
+      //put higher number (in lesser position) to the side
+      let temp = array[i]
+      //set lesser position to the value in next index
+      array[i] = array[i + 1]
+      //set higher position to higher number 
+      array[i + 1] = temp
+
+    }
+  }
+  return array 
+}
