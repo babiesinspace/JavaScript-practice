@@ -1,0 +1,54 @@
+section {
+  height: 800px;
+}
+
+#section1 {
+  background-color: lightblue;
+}
+
+#section2 {
+  background-color: pink; 
+}
+
+#section3 {
+  background-color: orange; 
+}
+
+#section4 {
+  background-color: lightgrey;
+}
+
+img {
+  height: 400px;
+}
+
+.wolf {
+  text-align: center;
+}
+
+#smaller {
+  font-size: 0.5em;
+}
+
+.big-text {
+  font-size: 4em;
+}
+
+.side-by {
+  display: flex;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  animation-name: transition;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transition {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
