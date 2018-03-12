@@ -37,3 +37,13 @@ img {
 .hidden {
   opacity: 0;
 }
+
+.show {
+  animation-name: transition;
+  animation-duration: 600ms;
+}
+
+@keyframes transition {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
