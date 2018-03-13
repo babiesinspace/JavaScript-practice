@@ -10,6 +10,11 @@ let setFirstTo = document.getElementById('firstTo')
 
 let playingTo = document.getElementById('playingTo')
 
+function foundWinner(){
+  p1button.disabled = true;
+  p2button.disabled = true;
+}
+
 function toNumber(score){
   return Number(score);
 }
@@ -26,11 +31,19 @@ function scoreUp(score){
 p1button.addEventListener("click", function() {
   let newScore = scoreUp(p1score.innerText)
   p1score.innerText = newScore;
+  if (p1score.innerText == playingTo.innerText) {
+    p1score.style.color = 'green'
+    foundWinner()
+  }
 })
 
 p2button.addEventListener("click", function() {
   let newScore = scoreUp(p2score.innerText)
   p2score.innerText = newScore;
+  if (p2score.innerText == playingTo.innerText) {
+    p2score.style.color = 'green'
+    foundWinner()
+  }
 })
 
 setFirstTo.addEventListener("change", function(){
