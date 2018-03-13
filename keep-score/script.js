@@ -33,9 +33,9 @@ function enableButtons(){
 
 function resetScore(){
   p1score.innerText = 0;
-  p1score.style.color = 'black'
+  p1score.classList.remove("winner")
   p2score.innerText = 0;
-  p2score.style.color = 'black'
+  p1score.classList.remove("winner")
 }
 
 reset.addEventListener("click", function(){
@@ -47,7 +47,7 @@ p1button.addEventListener("click", function() {
   let newScore = scoreUp(p1score.innerText)
   p1score.innerText = newScore;
   if (p1score.innerText == playingTo.innerText) {
-    p1score.style.color = 'green'
+    p1score.classList.add("winner")
     foundWinner()
   }
 })
@@ -56,7 +56,7 @@ p2button.addEventListener("click", function() {
   let newScore = scoreUp(p2score.innerText)
   p2score.innerText = newScore;
   if (p2score.innerText == playingTo.innerText) {
-    p2score.style.color = 'green'
+    p1score.classList.add("winner")
     foundWinner()
   }
 })
