@@ -25,12 +25,15 @@ let body = document.querySelector("body")
 let isPurple = false
 
 
+// purpleButton.addEventListener("click", function(){
+//   if (isPurple) {
+//     body.style.background = "white";
+//   } else {
+//     body.style.background = "purple"
+//   }
+//   isPurple = !isPurple
+// })
+
 purpleButton.addEventListener("click", function(){
-  if (isPurple == true) {
-    body.style.background = "white";
-    isPurple = false
-  } else {
-    body.style.background = "purple"
-    isPurple = true
-  }
+  body.classList.toggle("purple");
 })
