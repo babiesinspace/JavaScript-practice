@@ -8,12 +8,29 @@
 
 let button = document.getElementById("submit-button")
 
-let password = document.getElementById("password")
+// let password = document.getElementById("password")
 
-let username = document.getElementById("username")
+// let username = document.getElementById("username")
 
-button.addEventListener("click", function() {
-  if (password.value != "12345678") {
-    alert("incorrect")
-  } 
+// button.addEventListener("click", function() {
+//   if (password.value != "12345678") {
+//     alert("incorrect")
+//   } 
+// })
+
+let purpleButton = document.getElementById("purple-button")
+
+let body = document.querySelector("body")
+
+let isPurple = false
+
+
+purpleButton.addEventListener("click", function(){
+  if (isPurple == true) {
+    body.style.background = "white";
+    isPurple = false
+  } else {
+    body.style.background = "purple"
+    isPurple = true
+  }
 })
