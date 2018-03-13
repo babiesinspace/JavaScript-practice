@@ -6,6 +6,10 @@ let p1score = document.querySelector('#p1score')
 
 let p2score = document.querySelector('#p2score')
 
+let setFirstTo = document.getElementById('firstTo')
+
+let playingTo = document.getElementById('playingTo')
+
 function toNumber(score){
   return Number(score);
 }
@@ -19,12 +23,16 @@ function scoreUp(score){
   return addPoint(num)
 }
 
-p1button.addEventListener("click", function () {
+p1button.addEventListener("click", function() {
   let newScore = scoreUp(p1score.innerText)
   p1score.innerText = newScore;
 })
 
-p2button.addEventListener("click", function () {
+p2button.addEventListener("click", function() {
   let newScore = scoreUp(p2score.innerText)
   p2score.innerText = newScore;
+})
+
+setFirstTo.addEventListener("change", function(){
+  playingTo.innerText = setFirstTo.value
 })
