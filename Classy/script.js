@@ -21,11 +21,11 @@ art1.render()
 // art1.render()
 
 class Meme extends Classic {
-  render(frame) {
-    this.frame = frame;
-    super.render()
+  constructor(art_url) {
+    super(art_url)
+    this.frame = "red-border";
   }
 }
 
 var meme1 = new Meme("http://i0.kym-cdn.com/entries/icons/original/000/022/940/spongebobicon.jpg")
-meme1.render("red-border")
+meme1.render()
