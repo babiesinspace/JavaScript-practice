@@ -1,0 +1,40 @@
+/*html, body {*/
+/*  height: 100%;*/
+/*  margin: 0;*/
+/*}*/
+#container {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  color: red;
+}
+
+#giffy {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+#button {
+  margin-top: 2%;
+  color: white;
+  background-color: black;
+}
+
+iframe {
+  /*display: block;*/
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+}
