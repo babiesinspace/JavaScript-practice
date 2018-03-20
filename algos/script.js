@@ -233,6 +233,34 @@ Array.prototype.myForEach = function(func) {
   }
 }
 
+//Remove repeated elements from array
+
+//using includes
+let array = [1,4,3,1,7]
+function removeDups(array){
+  let arr = []
+  for (var i = 0; i < array.length; i++) {
+    if (!arr.includes(array[i])) {
+      arr.push(array[i])
+    }
+  }
+  return arr;
+}
+//without includes
+function removeDup(array){
+  //instantiate empty array
+  let arr = [];
+  //loop through given array
+  for (let i = 0;i < array.length; i++){
+    //indexOf returns -1 if item is not found
+    if (arr.indexOf(array[i]) === -1){
+      //push non-duplicates to empty array
+      arr.push(array[i]);
+    }
+  }
+  return arr;
+}
+
 // Bubble Sort :
 
 function bubbleSort(array) {
