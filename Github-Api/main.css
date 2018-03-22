@@ -1,0 +1,121 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: lightblue;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Cagliostro', sans-serif;
+  height: 8%;
+  margin-bottom: 4%;
+}
+
+#image-container {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 2%;
+}
+
+#avatar {
+  margin: 0 auto;
+  height: 100%;
+}
+
+#butt-container {
+  height: 5%;
+  margin-bottom: 2%;
+}
+
+#button {
+  font-family: 'Cagliostro', sans-serif;
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+
+#repo-container {
+  height: 35%;
+  margin-bottom: 2%;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: wrap;
+  overflow-y: scroll;
+}
+
+#repo-container ul {
+  list-style-type: none;
+  column-count: 2;
+  text-align: center;
+  padding-left: 0;
+}
+
+
+#follow-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#follow-container img {
+  height: 100%;
+  width: 30px;
+  float: left;
+}
+
+#follow-container li {
+  display: block;
+  height: 30px;
+  padding: 2%;
+  text-align: center;
+}
+
+#follow-container a {
+  float: right;
+  height: 100%;
+}
+
+#follow-container {
+  height: 15%;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: wrap;
+  overflow-y: scroll;
+}
+
+h3, h5 {
+  margin-top: 0%;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 700px) {
+  #repo-container ul {
+    column-count: 3;
+  }
+
+  #follow-container li {
+    display: block;
+    height: 60px;
+    padding-right: 15%;
+    padding-left: 15%;
+  }  
+
+  #follow-container ul {
+    column-count: 2;
+  }
+
+  #follow-container img {
+    width: 60px;
+  }
+}
