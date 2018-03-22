@@ -32,12 +32,18 @@ function createEntry(){
   //append the button container to the detail div
   buttonDiv = $("<div/>").appendTo(detailDiv).addClass("button")
   //put the button in its container
-  actualButton = $("<button/>").appendTo(buttonDiv)
+  actualButton = $("<button/>").appendTo(buttonDiv).text("Add to Cart")
   //append the description container to the item div
   description = $("<div/>").appendTo(newItem).addClass("description")
 }
 
-createEntry()
+function populateEntry(){
+  $(image).attr("src", entry.image)
+  $(titleH3).text(entry.title)
+  $(cost).text("$ " + entry.price)
+  $(entry.description).appendTo(description)
+}
+
 $.ajax({
   url: "https://www.redbullshopus.com/products.json",
   success: function(response){
@@ -47,7 +53,8 @@ $.ajax({
       entry.description = product.body_html
       entry.price = product.variants[0].price
       entry.image = product.images[0].src
+      createEntry()
+      populateEntry()
     })
-    console.log(entry.title)
   }
 })
