@@ -66,7 +66,7 @@ img {
     display: inline-block;
   }
 
-  a {
+  .image-box {
     width: 45%;
     float: left;
   }
@@ -84,7 +84,7 @@ img {
     margin: 0 auto;
   }
 
-  a {
+  .image-box {
     width: 45%;
     float: left;
     height: 300px;
@@ -109,7 +109,7 @@ img {
     height: 370px;
   }
 
-  a {
+  .image-box {
     width: 200px;
     height: 200px;
     margin: 0 auto;
