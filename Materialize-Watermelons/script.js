@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('.modal').modal(); 
   setTimeout(function() {$('#modal1').modal('open');}, 5000)
   $('.carousel').carousel({
-      padding: 200    
+      fullWidth: true   
   });
   autoplay()   
   function autoplay() {
